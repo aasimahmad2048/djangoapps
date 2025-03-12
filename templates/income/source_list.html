@@ -1,0 +1,13 @@
+<h1>List View</h1>
+{% for x in  object_list%}
+
+{{x.name}}
+<a href="{% url "update_category" x.id %}">Update</a>
+<a href=" {% url "delete_category" x.id %}">Delete</a>
+<br>
+ 
+
+{%empty%}
+<h3>No Object  found</h3>
+
+{% endfor %}
